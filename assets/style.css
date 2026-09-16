@@ -1,0 +1,58 @@
+:root{
+
+    /* fontes */
+  --font-title: "Orbitron", sans-serif;
+  --font-text: arial, regular;
+
+  
+    /* Cores */
+    --color-primary:#4adec0;
+    --color-secondary:#0b2f3d;
+    --color-terciary:#c3fff3;
+    --color-background:#1a0d35;
+    --color-grey100:#eff1f3;
+    --color-grey200:#d9dde1;
+    --color-grey300:#b3bac3;
+    --color-grey400:#8996a2;
+    --color-grey500:#344450;
+    --color-grey600:#1a2a34;
+
+ 
+    /* Espaçamentos */
+    --spacing-xs: 8px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 50px;
+    --spacing-2xl:60px;
+    --spacing-3xl:80px;
+ 
+    /* Tamanhos */
+    --btn-min-width: 180px;
+    --hero-max-width: 900px;
+ 
+    /* Bordas */
+    --radius-sm: 8px;
+    --radius-pill: 80px;
+    --border-width: 2px;
+ 
+    /* Efeitos */
+    --transition-fast: .5s;
+    --blur-sm: 7px;
+
+    /* bold */
+    --bold-72: 72px;
+    --bold-56: 56px;
+    --bold-48: 48px;
+    --bold-32: 32px;
+    --bold-24: 24px;
+
+    /* button */
+    --button-bold: 20px;
+    --button-semibold: 20px;
+
+}
+
+p{
+    font-family: var(--font-title);
+}
