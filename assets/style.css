@@ -2,22 +2,22 @@
 
     /* fontes */
   --font-title: "Orbitron", sans-serif;
-  --font-text: arial, regular;
+  --font-text: "Inter", regular;
 
   
     /* Cores */
     --color-primary:#4adec0;
     --color-secondary:#0b2f3d;
     --color-terciary:#c3fff3;
-    --color-background:#1a0d35;
+    --color-background:#130e22;
+    --color-background-secondary:#151623;
     --color-grey100:#eff1f3;
     --color-grey200:#d9dde1;
     --color-grey300:#b3bac3;
     --color-grey400:#8996a2;
     --color-grey500:#344450;
     --color-grey600:#1a2a34;
-
- 
+    
     /* Espaçamentos */
     --spacing-xs: 8px;
     --spacing-sm: 10px;
@@ -26,6 +26,15 @@
     --spacing-xl: 50px;
     --spacing-2xl:60px;
     --spacing-3xl:80px;
+
+    /* tamanhos de fonte */
+    --fonte-size-body:16px;
+    --fonte-size-body-sm:14px;
+    --fonte-size-h1: 56px;
+    --fonte-size-h2: 48px;
+    --fonte-size-h3: 32px;
+    --fonte-size-h4: 24px;
+
  
     /* Tamanhos */
     --btn-min-width: 180px;
@@ -50,9 +59,102 @@
     /* button */
     --button-bold: 20px;
     --button-semibold: 20px;
-
 }
 
-p{
+
+/* codigo de reset */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--color-background);
+    color: var(--color-grey100);
+    font-family: var(--font-text);
+}
+
+h1, h2, h3, h4{
     font-family: var(--font-title);
 }
+
+ 
+ul{
+    list-style-type: none;
+}
+ 
+img{
+    max-width: 100%;
+}
+
+
+.header{
+    background-color: var(--color-background-secondary);
+    padding: var(--spacing-md);
+
+    }
+
+.navegacao{
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.container-logo{
+    display: flex;
+    gap:var(--spacing-xs);
+    align-items: center;
+}
+
+.titulo-logo{
+    font-family: var(--font-title);
+    color: var(--color-grey100);
+    margin: 0;
+}
+
+.destaque-titulo{
+    color: var(--color-primary);
+}
+
+.container-header{
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: center;
+
+}
+
+i, a{
+    color: var(--color-grey100);
+    
+}
+
+.btn-primary{
+    background-color: var(--color-primary);
+    color: var(--color-grey600);
+    border-radius:13px;
+    padding: 9px 18px;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-secundary{
+    background:none;
+    color: var(--color-terciary);
+    border-radius:13px;
+    padding: 9px 18px;
+    border: var(--border-width) solid var(--color-terciary) ;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
