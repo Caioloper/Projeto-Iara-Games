@@ -22,10 +22,13 @@
     --spacing-xs: 8px;
     --spacing-sm: 10px;
     --spacing-md: 20px;
-    --spacing-lg: 30px;
+    --spacing-lg: 32px;
     --spacing-xl: 50px;
     --spacing-2xl:60px;
     --spacing-3xl:80px;
+    --spacing-cards: 14px;
+    
+    --margin-section: 118px;
 
     /* tamanhos de fonte */
     --fonte-size-body:16px;
@@ -41,7 +44,7 @@
     --hero-max-width: 900px;
  
     /* Bordas */
-    --radius-sm: 8px;
+    --radius-sm: 12px;
     --radius-pill: 80px;
     --border-width: 2px;
  
@@ -57,8 +60,12 @@
     --bold-24: 24px;
 
     /* button */
-    --button-bold: 20px;
-    --button-semibold: 20px;
+    --button-font-size: 24px;
+    --button-semibold: 18px;
+
+    /* Padding */
+    --padding-primary: 8px 18px;
+    --padding-input-secondary: 18px;
 }
 
 
@@ -68,18 +75,32 @@
 *:before {
     box-sizing: border-box;
     text-decoration: none;
+    margin: 0;
 }
 
+/* Estilos Gerais */
 body{
     background-color: var(--color-background);
     color: var(--color-grey100);
     font-family: var(--font-text);
+    
+}
+
+button{
+    font-family: var(--font-text);
+}
+
+a{
+    color: var(--color-grey100);
 }
 
 h1, h2, h3, h4{
     font-family: var(--font-title);
 }
 
+h2{
+    margin-bottom: var(--spacing-lg);
+}
  
 ul{
     list-style-type: none;
@@ -89,22 +110,63 @@ img{
     max-width: 100%;
 }
 
+.titulo-centro{
+    margin-top: 80px;
+    text-align: center;
+}
 
+.btn-primary{
+    background-color: var(--color-primary);
+    color: var(--color-grey600);
+    border-radius: var(--radius-sm);
+    padding: var(--padding-primary);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-secondary{
+    background:none;
+    color: var(--color-terciary);
+    border-radius: var(--radius-sm);
+    padding: var(--padding-primary);
+    border: var(--border-width) solid var(--color-terciary) ;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sessao-main{
+    margin: 0 var(--spacing-3xl);
+    margin-bottom: var(--margin-section);
+}
+
+.sessao-main h2{
+    font-size: var(--bold-32);
+}
+
+
+/* Cabeçalho */
 .header{
     background-color: var(--color-background-secondary);
     padding: var(--spacing-md);
-
-    }
+    position: fixed top;
+}
 
 .navegacao{
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+}
+
+.container-header{
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: center;
 
 }
 
 .container-logo{
     display: flex;
-    gap:var(--spacing-xs);
+    gap: var(--spacing-xs);
     align-items: center;
 }
 
@@ -118,43 +180,256 @@ img{
     color: var(--color-primary);
 }
 
-.container-header{
-    display: flex;
-    gap: var(--spacing-xl);
-    align-items: center;
-
-}
-
-i, a{
+.input-search{
+    padding: var(--padding-primary);
+    border-radius: var(--radius-sm);
+    background: none;
+    border: var(--border-width) solid var(--color-grey300);
+    width: 300px;
     color: var(--color-grey100);
-    
 }
 
-.btn-primary{
-    background-color: var(--color-primary);
-    color: var(--color-grey600);
-    border-radius:13px;
-    padding: 9px 18px;
-    border: none;
+.icone-btn{
+    color: var(--color-grey100);
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+
+.hero{
+    background-image: url('../assets/imagens/background_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: var(--spacing-3xl);
+    margin-bottom: var(--margin-section);
+    place-content: center;
+    height: 80vh;
+}
+
+.hero-title{
+    font-size: var(--bold-56);
+    max-width: var(--hero-max-width);
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-description{
+    font-size: var(--bold-24);
+    max-width: var(--hero-max-width);
+    font-weight: 300;
+    margin-bottom: var(--spacing-lg);
+}
+
+.hero-price{
+    font-size: var(--bold-32);
+    max-width: var(--hero-max-width);
+    margin-bottom: var(--spacing-lg);
     font-weight: bold;
 }
 
-.btn-secundary{
-    background:none;
-    color: var(--color-terciary);
-    border-radius:13px;
-    padding: 9px 18px;
-    border: var(--border-width) solid var(--color-terciary) ;
+.hero-buttons{
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.hero-btn{
+    font-size: var(--button-font-size);
+    padding: 12px 24px;
+}
+
+/* Sessão de Generos */
+.generos-lista{
+    display: flex;
+    gap: var(--spacing-cards);
+    padding: 0
+}
+
+.generos-lista button{
+    border: 1px solid var(--color-terciary);
+    color: var(--color-grey100);
+    background-color: var(--color-secondary);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+/* Sessão de Jogos em Destaque (aproveitado na sessão de Ofertas Especiais) */
+.destaques-generos-lista{
+    display: flex;
+    gap: var(--spacing-cards);
+    margin-bottom: var(--spacing-lg);
+    padding: 0;
+}
+
+.btn-genero-destaque{
+    background: none;
+    color: var(--color-grey300);
+    border: 1px solid var(--color-grey300);
+    border-radius: var(--radius-sm);
+    padding: var(--padding-primary);
+    cursor: pointer;
+}
+
+.destaques-jogos-lista{
+    display: flex;
+    gap: 24px;
+    padding: 0;
+}
+
+.destaques-jogos-lista li{
+    background-color: var(--color-secondary);
+    width: 250px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.destaques-jogos-lista li img{
+    width: 100%;
+}
+
+.destaques-conteiner-card{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.destaques-conteiner-card h3{
+    font-size: 22px;
+    margin: 0;
+}
+
+.badge-genero{
+    color: #22EE88;
+    font-size: var(--fonte-size-body-sm);
+}
+
+.destaques-plataformas{
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.destaques-plataformas span{
+    padding: 8px;
+    background-color: var(--color-grey500);
+    border-radius: var(--radius-pill);
+    font-size: var(--fonte-size-body-sm);
+    color: var(--color-grey100);
+}
+
+.destaques-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--spacing-md);
     font-weight: bold;
 }
 
+.destaques-btns button{
+    font-size: var(--fonte-size-body);
+}
 
 
+/* Sessão Sobre o Projeto */
 
+.sobre-projeto{
+    background-color: #141525;
+    padding: var(--spacing-xl);
+    border: var(--border-width) solid var(--color-terciary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--margin-section);
+}
 
+.sobre-projeto-badge{
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: var(--fonte-size-body-sm);
+    font-weight: bold;
+    margin-bottom: 14px;
+}
 
+.sobre-projeto-title{
+    margin-bottom: var(--spacing-md);
+}
 
+.sobre-projeto-description{
+    max-width: 70%;
+    line-height: 1.5;
+}
 
+.sobre-projeto-btn{
+    font-size: 20px;
+    width: 300px;
+    padding: 16px 24px;
+}
 
+/* Sessao de ofertas especiais */
+.promocao{
+    background-color: #FACC15;
+}
 
+.label-promocao{
+    color: #FACC15;
+}
 
+/* Sessao de newsletter */
+.newsletter{
+    background-color: #141525;
+    padding: var(--spacing-xl);
+    border: var(--border-width) solid #2D2F4A;
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.newsletter-description{
+    margin-bottom: var(--spacing-lg);
+}
+
+.newsletter-form-container{
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+.input-email{
+    padding: var(--padding-input-secondary);
+    border-radius: var(--radius-sm);
+    background: none;
+    border: var(--border-width) solid #2D2F4A;
+    width: 300px;
+    color: var(--color-grey100);
+}
+
+.newsletter-btn{
+    font-size: var(--button-semibold);
+    width: 200px;
+    padding: 16px 24px;
+}
+
+/* Footer */
+.footer{
+    margin: 0 var(--spacing-3xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.lista-midias{
+    padding: 0;
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.copy-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+}

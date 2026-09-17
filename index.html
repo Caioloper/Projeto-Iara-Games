@@ -21,165 +21,223 @@
                     <p class="titulo-logo">IARA <span class="destaque-titulo">GAMES</span></p>
                     <img src="./assets/imagens/flag_brasil.svg" alt="Bandeira do Brasil">
                 </div>
-                <a href="#">Comunidade</a>
-                <a href="#">Promoções</a>
-                <input type="search" placeholder="Buscar jogo...">
+                <a href="./em_desenvolvimento.html">Comunidade</a>
+                <a href="./em_desenvolvimento.html">Promoções</a>
+                <input class="input-search" type="search" placeholder="Buscar jogo...">
             </div>
             <div class="container-header">
-                <i class="bi bi-cart"></i>
-                <button class="btn-secundary">Criar Conta</button>
+                <i class="bi bi-cart icone-btn"></i>
+                <button class="btn-secondary">Criar Conta</button>
                 <button class="btn-primary">Entrar</button>
-                <i class="bi bi-list"></i>
+                <i class="bi bi-list icone-btn"></i>
             </div>
         </nav>
     </header>
     
     <main>
-        <section>
-            <h1>Eclipse: Realms of Shadow</h1>
-            <p>Mergulhe em um mundo sombrio de conspirações e magia proibida. Uma aventura épica com mais de 80 horas de conteúdo.</p>
-            <p>R$ 149,90</p>
-            <div>
-                <button>Comprar Agora</button>
-                <button>Saiba mais</button>
+        <section class="hero">
+            <h1 class="hero-title">Eclipse: Realms of Shadow</h1>
+            <p class="hero-description">Mergulhe em um mundo sombrio de conspirações e magia proibida. Uma aventura épica com mais de 80 horas de conteúdo.</p>
+            <p class="hero-price">R$ 149,90</p>
+            <div class="hero-buttons">
+                <button class="btn-primary hero-btn">Comprar Agora</button>
+                <button class="btn-secondary hero-btn">Saiba mais</button>
             </div>
         </section>
 
-        <section>
+        <section class="sessao-main generos">
             <h2>Explorar por Gênero</h2>
-            <ul>
-                <li>Ação</li>
-                <li>RPG</li>
-                <li>Estratégia</li>
-                <li>Esportes</li>
-                <li>Aventura</li>
-                <li>Simulação</li>
+            <ul class="generos-lista">
+                <li>
+                    <button>Ação</button>
+                </li>
+                <li>
+                    <button>RPG</button>
+                </li>
+                <li>
+                    <button>Estratégia</button>
+                </li>
+                <li>
+                    <button>Esportes</button>
+                </li>
+                <li>
+                    <button>Aventura</button>
+                </li>
+                <li>
+                    <button>Simulação</button>
+                </li>
             </ul>
         </section>
 
-        <section>
+        <section class="sessao-main">
             <h2>Jogos em Destaque</h2>
             <div>
-                <ul>
-                    <li>Ação</li>
-                    <li>RPG</li>
-                    <li>Estratégia</li>
-                    <li>Esportes</li>
-                    <li>Aventura</li>
-                    <li>Simulação</li>
+                <ul class="destaques-generos-lista">
+                    <li>
+                        <button class="btn-primary">Todos</button>
+                    </li>
+                    <li>
+                        <button class="btn-genero-destaque">Ação</button>
+                    </li>
+                    <li>
+                        <button class="btn-genero-destaque">RPG</button>
+                    </li>
+                    <li>
+                        <button class="btn-genero-destaque">Estratégia</button>
+                    </li>
+                    <li>
+                        <button class="btn-genero-destaque">Esportes</button>
+                    </li>
+                    <li>
+                        <button class="btn-genero-destaque">Aventura</button>
+                    </li>
+                    <li>
+                        <button class="btn-genero-destaque">Simulação</button>
+                    </li>
                 </ul>
-                <ul>
+                <ul class="destaques-jogos-lista">
                     <li>
-                        <img src="../Projeto-Iara-Games/assets/imagens/card_vertical.jpg" alt="jogo de luta">
-                        <span>RPG</span>
-                        <h3>Realm of Warriors</h3>
-                        <!--estrelas rs-->
-                        <div> 
-                            <span>PC</span>
-                            <span>PS5</span> 
-                        </div>
-                        <div>
-                            <p>R$ 79,90</p>
-                            <button>Comprar</button>
+                        <img src="./assets/imagens/card_vertical.jpg" alt="jogo de luta">
+                        <div class="destaques-conteiner-card">
+                            <div>
+                                <span class="badge-genero">RPG</span>
+                            </div>
+                        
+                            <h3>Realms 2</h3>
+                            <!--estrelas rs-->
+                            <div class="destaques-plataformas">
+                                <span>PC</span>
+                                <span>PS5</span> 
+                            </div>
+                            <div class="destaques-btns">
+                                <p>R$ 79,90</p>
+                                <button class="btn-primary">Comprar</button>
+                            </div>
+                        </div>   
+                    </li>
+                    <li>
+                        <img src="./assets/imagens/card_vertical.jpg" alt="jogo de luta">
+                        <div class="destaques-conteiner-card">
+                            <div>
+                                <span class="badge-genero">Aventura</span>
+                            </div>
+                            
+                            <h3>Stellar Drift</h3>
+                            <!--estrelas rs-->
+                            <div class="destaques-plataformas"> 
+                                <span>PC</span> 
+                            </div>
+                            <div class="destaques-btns">
+                                <p>R$ 59,90</p>
+                                <button class="btn-primary">Comprar</button>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <img src="../Projeto-Iara-Games/assets/imagens/card_vertical.jpg" alt="jogo de luta">
-                        <span>Aventura</span>
-                        <h3>Stellar Drift</h3>
-                        <!--estrelas rs-->
-                        <div> 
-                            <span>PC</span> 
-                        </div>
-                        <div>
-                            <p>R$ 59,90</p>
-                            <button>Comprar</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../Projeto-Iara-Games/assets/imagens/card_vertical.jpg" alt="jogo de luta">
-                        <span>Estratégia</span>
-                        <h3>Iron throne chronicles</h3>
-                        <!--estrelas rs-->
-                        <div> 
-                            <span>Xbox</span> 
-                        </div>
-                        <div>
-                            <p>R$ 49,90</p>
-                            <button>Comprar</button>
+                        <img src="./assets/imagens/card_vertical.jpg" alt="jogo de luta">
+                        <div class="destaques-conteiner-card">
+                            <div>
+                                <span class="badge-genero">Estratégia</span>
+                            </div>
+                            <h3>Iron throne</h3>
+                            <!--estrelas rs-->
+                            <div class="destaques-plataformas"> 
+                                <span>Xbox</span> 
+                            </div>
+                            <div class="destaques-btns">
+                                <p>R$ 49,90</p>
+                                <button class="btn-primary">Comprar</button>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <img src="../Projeto-Iara-Games/assets/imagens/card_vertical.jpg" alt="jogo de luta">
-                        <span>FPS</span>
-                        <h3>Shadow Protocol</h3>
-                        <!--estrelas rs-->
-                        <div> 
-                            <span>PC</span>
-                            <span>PS5</span> 
-                            <span>Xbox</span> 
-                        </div>
-                        <div>
-                            <p>R$ 99,90</p>
-                            <button>Comprar</button>
+                        <img src="./assets/imagens/card_vertical.jpg" alt="jogo de luta">
+                        <div class="destaques-conteiner-card">
+                            <div>
+                                <span class="badge-genero">FPS</span>
+                            </div>
+                            <h3>Shadow Protocol</h3>
+                            <!--estrelas rs-->
+                            <div class="destaques-plataformas"> 
+                                <span>PC</span>
+                                <span>PS5</span> 
+                                <span>Xbox</span> 
+                            </div>
+                            <div class="destaques-btns">
+                                <p>R$ 99,90</p>
+                                <button class="btn-primary">Comprar</button>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <section>
-            <img src="../Projeto-Iara-Games/assets/imagens/Logo IG.png" alt="Logo Iara Games">
+
+        <section class="sessao-main sobre-projeto">
+            <img src="./assets/imagens/Logo IG.png" alt="Logo Iara Games">
             <div>
-                <span>Sobre o Projeto</span>
-                <h2>Conheça a Iara Games</h2>
-                <p>Nascemos com a missão de democratizar o acesso a jogos digitais no Brasil. Plataforma 100% brasileira, com suporte local, pagamentos em reais e curadoria feita por gamers de verdade.</p>
+                <span class="sobre-projeto-badge">Sobre o Projeto</span>
+                <h2 class="sobre-projeto-title">Conheça a Iara Games</h2>
+                <p class="sobre-projeto-description">Nascemos com a missão de democratizar o acesso a jogos digitais no Brasil. Plataforma 100% brasileira, com suporte local, pagamentos em reais e curadoria feita por gamers de verdade.</p>
             </div>
-            <button>Saiba mais</button>
+            <button class="btn-secondary sobre-projeto-btn">Saiba mais</button>
         </section> 
-        <section>
+        <section class="sessao-main">
             <h2>Ofertas Especiais</h2>
             <div>
-                <ul>
+                <ul class="destaques-jogos-lista">
                     <li>
-                        <img src="../Projeto-Iara-Games/assets/imagens/card_horizontal.jpg" alt="jogo de luta">
-                        <span>RPG</span>
-                        <h3>Cyber Exodus</h3>
-                        <!--estrelas rs-->
-                        <div> 
-                            <span>PC</span>
-                            <span>PS5</span> 
-                        </div>
-                        <div>
-                            <p>R$ 39,90</p>
-                            <button>Comprar</button>
+                        <img src="./assets/imagens/card_horizontal.jpg" alt="jogo de luta">
+                        <div class="destaques-conteiner-card">
+                            <div>
+                                <span class="badge-genero label-promocao">RPG</span>
+                            </div>
+                            <h3>Cyber Exodus</h3>
+                            <!--estrelas rs-->
+                            <div class="destaques-plataformas"> 
+                                <span>PC</span>
+                                <span>PS5</span> 
+                            </div>
+                            <div class="destaques-btns">
+                                <p class="label-promocao">R$ 39,90</p>
+                                <button class="btn-primary promocao">Comprar</button>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <img src="../Projeto-Iara-Games/assets/imagens/card_horizontal.jpg" alt="jogo de luta">
-                        <span>RPG</span>
-                        <h3>Cyber Exodus</h3>
-                        <!--estrelas rs-->
-                        <div> 
-                            <span>PC</span>
-                            <span>PS5</span> 
-                        </div>
-                        <div>
-                            <p>R$ 39,90</p>
-                            <button>Comprar</button>
+                        <img src="./assets/imagens/card_horizontal.jpg" alt="jogo de luta">
+                        <div class="destaques-conteiner-card">
+                            <div>
+                                <span class="badge-genero label-promocao">RPG</span>
+                            </div>
+                            <h3>Cyber Exodus</h3>
+                            <!--estrelas rs-->
+                            <div class="destaques-plataformas"> 
+                                <span>PC</span>
+                                <span>PS5</span> 
+                            </div>
+                            <div class="destaques-btns">
+                                <p class="label-promocao">R$ 39,90</p>
+                                <button class="btn-primary promocao">Comprar</button>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <img src="../Projeto-Iara-Games/assets/imagens/card_horizontal.jpg" alt="jogo de luta">
-                        <span>RPG</span>
-                        <h3>Cyber Exodus</h3>
-                        <!--estrelas rs-->
-                        <div> 
-                            <span>PC</span>
-                            <span>PS5</span> 
-                        </div>
-                        <div>
-                            <p>R$ 39,90</p>
-                            <button>Comprar</button>
+                        <img src="./assets/imagens/card_horizontal.jpg" alt="jogo de luta">
+                        <div class="destaques-conteiner-card">
+                            <div>
+                                <span class="badge-genero label-promocao">RPG</span>
+                            </div>
+                            <h3>Cyber Exodus</h3>
+                            <!--estrelas rs-->
+                            <div class="destaques-plataformas"> 
+                                <span>PC</span>
+                                <span>PS5</span> 
+                            </div>
+                            <div class="destaques-btns">
+                                <p class="label-promocao">R$ 39,90</p>
+                                <button class="btn-primary promocao">Comprar</button>
+                            </div>
                         </div>
                     </li>
                     
@@ -187,29 +245,28 @@
             </div>
         </section>
 
-        <section>
+        <section class="sessao-main newsletter">
             <h2>Fique por dentro das novidades</h2>
-            <p>Receba alertas de promoções, lançamentos e cupons exclusivos direto no seu e-mail.</p>
-            <div>
-                <input type="email" placeholder="Seu melhor e-mail">
-                <button>Inscrever-se</button>
+            <p class="newsletter-description">Receba alertas de promoções, lançamentos e cupons exclusivos direto no seu e-mail.</p>
+            <div class="newsletter-form-container">
+                <input class="input-email" type="email" placeholder="seu@email.com">
+                <button class="btn-primary newsletter-btn">Inscrever-se</button>
             </div>
         </section>
     </main>
-    <footer>
-        <div>
-            <p>Iara Games</p>
+    <footer class="footer">
+        <div class="container-logo">
+            <p class="titulo-logo">IARA <span class="destaque-titulo">GAMES</span></p>
             <img src="./assets/imagens/flag_brasil.svg" alt="Bandeira do Brasil">
         </div>
-        <p>A maior loja de jogos digitais do Brasil. Chaves originais, entrega instantânea e preços imbatíveis. 
-        </p>
+        <p>A maior loja de jogos digitais do Brasil. Chaves originais, entrega instantânea e preços imbatíveis. </p>
         <!-- icones de rede sociais -->
-        <ul>
+        <ul class="lista-midias">
             <li><a href="#" target="_blank"><i class="bi bi-facebook"></i></a></li>
             <li><a href="#" target="_blank"><i class="bi bi-instagram"></i></a></li>
             <li><a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
         </ul>
-        <div>
+        <div class="copy-container">
             <p>© 2026 Iara Games. Todos os direitos reservados. CNPJ 00.000.000/0001-00</p>
             <p>Desenvolvido com 💚 no Brasil</p>
         </div>
