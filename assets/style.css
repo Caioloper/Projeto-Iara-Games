@@ -433,3 +433,8 @@ img{
     justify-content: space-between;
     margin-bottom: var(--spacing-lg);
 }
+
+/*Avaliações*/
+.avaliação {
+    font-family:orbitron;
+}
