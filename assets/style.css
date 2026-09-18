@@ -64,7 +64,8 @@
     --button-semibold: 18px;
 
     /* Padding */
-    --padding-primary: 8px 18px;
+    --padding-primary: 16px 24px;
+    --padding-secondary: 12px 20px;
     --padding-input-secondary: 18px;
 }
 
@@ -119,20 +120,34 @@ img{
     background-color: var(--color-primary);
     color: var(--color-grey600);
     border-radius: var(--radius-sm);
-    padding: var(--padding-primary);
+    padding: var(--padding-secondary);
     border: none;
     font-weight: bold;
     cursor: pointer;
+    font-size: var(--fonte-size-body);
+    /* Propriedade responsável por animar a transição */
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover{
+    background-color: #5df0d2;
 }
 
 .btn-secondary{
     background:none;
     color: var(--color-terciary);
     border-radius: var(--radius-sm);
-    padding: var(--padding-primary);
-    border: var(--border-width) solid var(--color-terciary) ;
+    padding: var(--padding-secondary);
+    border: var(--border-width) solid var(--color-terciary);
+    font-size: var(--fonte-size-body);
     font-weight: bold;
     cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover{
+    background-color: var(--color-secondary);
 }
 
 .sessao-main{
@@ -192,6 +207,7 @@ img{
 .icone-btn{
     color: var(--color-grey100);
     cursor: pointer;
+    font-size: var(--button-semibold);
 }
 
 
@@ -234,14 +250,17 @@ img{
 }
 
 .hero-btn{
-    font-size: var(--button-font-size);
-    padding: 12px 24px;
+    /* font-size: var(--button-font-size);
+    padding: 12px 24px; */
+    font-size: var(--button-semibold);
+    /* width: 200px; */
+    padding: 16px 24px;
 }
 
 /* Sessão de Generos */
 .generos-lista{
     display: flex;
-    gap: var(--spacing-cards);
+    gap: var(--spacing-md);
     padding: 0
 }
 
@@ -249,9 +268,16 @@ img{
     border: 1px solid var(--color-terciary);
     color: var(--color-grey100);
     background-color: var(--color-secondary);
-    padding: var(--spacing-md);
+    padding: var(--padding-primary);
     border-radius: var(--radius-sm);
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: 70px;
+}
+
+.generos-lista button:hover{
+    background-color: #104458;
 }
 
 /* Sessão de Jogos em Destaque (aproveitado na sessão de Ofertas Especiais) */
@@ -267,7 +293,7 @@ img{
     color: var(--color-grey300);
     border: 1px solid var(--color-grey300);
     border-radius: var(--radius-sm);
-    padding: var(--padding-primary);
+    padding: var(--padding-secondary);
     cursor: pointer;
 }
 
@@ -279,7 +305,7 @@ img{
 
 .destaques-jogos-lista li{
     background-color: var(--color-secondary);
-    width: 250px;
+    width: 33%;
     border-radius: var(--radius-sm);
     overflow: hidden;
 }
@@ -363,14 +389,19 @@ img{
 }
 
 .sobre-projeto-btn{
-    font-size: 20px;
-    width: 300px;
+    width: 200px;
+    font-size: var(--button-semibold);
     padding: 16px 24px;
 }
 
 /* Sessao de ofertas especiais */
 .promocao{
     background-color: #FACC15;
+    transition: background-color 0.3s ease;
+}
+
+.promocao:hover{
+    background-color: #ffe167;
 }
 
 .label-promocao{
