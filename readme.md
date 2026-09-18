@@ -8,6 +8,7 @@
 ![Figma](https://img.shields.io/badge/design-Figma-ff69b4)
 ![Made with Love](https://img.shields.io/badge/feito%20com-%E2%9D%A4-red)
 
+OBS: Atualmente esta primeira versão possui uma página estática em HTML e CSS
 ---
 
 ## 📖 Descrição / Visão Geral
