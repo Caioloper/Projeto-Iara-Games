@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/root.css" />
+    <link rel="stylesheet" href="criar_conta.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Criar Conta</title>
+  </head>
+  <body>
+    <header class="cabecalho-conta">
+      <div class="cabecalho-conta__interno">
+        <a class="marca-conta" href="../index.html" aria-label="Iara Games, página inicial">
+          <span class="marca-conta__nome">IARA <span>GAMES</span></span>
+          <img src="../assets/imagens/flag_brasil.svg" alt="Bandeira do Brasil" />
+        </a>
+        <a class="voltar-inicio" href="../index.html">Voltar à página inicial</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="conteudo-cadastro">
+        <section class="destaque-criar-conta">
+          <h1>Seu próximo jogo começa aqui.</h1>
+          <p>
+            Descubra jogos brasileiros, apoie estúdios nacionais e encontre sua
+            próxima aventura
+          </p>
+        </section>
+
+        <section class="criar-conta">
+          <h2>Crie sua conta</h2>
+          <p>
+            Crie sua conta para favoritar jogos e acompanhar estúdios brasileiros.
+          </p>
+
+        <form class="formulario">
+          <div class="email">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="E-mail"
+              id="email"
+              placeholder="voce@exemplo.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="crie-senha">
+            <label for="senha-1">Crie uma senha</label>
+            <input
+              type="password"
+              name="Password"
+              id="senha-1"
+              placeholder="Mínimo de 8 caracteres"
+              required
+            />
+          </div>
+
+          <div class="confirme-senha">
+            <label for="senha-2">Confirme sua senha</label>
+            <input
+              type="password"
+              name="senha"
+              id="senha-2"
+              placeholder="Confirme sua senha"
+              required
+            />
+          </div>
+
+          <button type="submit" class="botao-criar-conta">Criar conta</button>
+
+          <div class="entrar-com-conta">
+            <p>Já tem uma conta? <span>Entrar</span></p>
+          </div>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

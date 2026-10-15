@@ -1,0 +1,313 @@
+:root {
+
+  color-scheme: dark;
+ 
+  /* ========================================
+
+     COLORS — BRAND
+
+     ======================================== */
+ 
+  --color-brand-primary: #23e067;
+
+  --color-brand-primary-hover: #43e77e;
+
+  --color-brand-primary-pressed: #1fc75c;
+
+  --color-on-primary: #0d2416;
+ 
+  --color-accent-secondary: #2e2285;
+
+  --color-accent-secondary-soft: #4738aa;
+ 
+  /* ========================================
+
+     COLORS — BACKGROUNDS AND SURFACES
+
+     ======================================== */
+ 
+  --color-bg-canvas: #141122;
+
+  --color-bg-deep: #0d0b18;
+ 
+  --color-surface-raised: #161533;
+
+  --color-surface-overlay: #1c1940;
+
+  --color-surface-subtle: #201d48;
+ 
+  /* ========================================
+
+     COLORS — BORDERS
+
+     ======================================== */
+ 
+  --color-border-subtle: rgba(92, 79, 181, 0.28);
+
+  --color-border-default: rgba(92, 79, 181, 0.46);
+
+  --color-border-focus: #23e067;
+ 
+  /* ========================================
+
+     COLORS — TEXT
+
+     ======================================== */
+ 
+  --color-text-primary: #eff1f3;
+
+  --color-text-secondary: #aab3c2;
+
+  --color-text-muted: #77849a;
+
+  --color-text-brand: #23e067;
+ 
+  /* ========================================
+
+     COLORS — FEEDBACK
+
+     ======================================== */
+ 
+  --color-feedback-warning: #facc15;
+
+  --color-feedback-danger: #ff6b81;
+ 
+  /* ========================================
+
+     TYPOGRAPHY — FONT FAMILIES
+
+     ======================================== */
+ 
+  --font-family-display: 'Orbitron', 'Inter', sans-serif;
+
+
+ 
+  --font-family-body: 'Inter', sans-serif;
+
+  
+  /* ========================================
+
+     TYPOGRAPHY — FONT WEIGHTS
+
+     ======================================== */
+ 
+  --font-weight-regular: 400;
+
+  --font-weight-medium: 500;
+
+  --font-weight-semibold: 600;
+
+  --font-weight-bold: 700;
+
+  --font-weight-black: 900;
+ 
+  /* ========================================
+
+     TYPOGRAPHY — PRIMITIVE FONT SIZES
+
+     ======================================== */
+ 
+  --font-size-2xs: 0.625rem; /* 10px */
+
+  --font-size-xs: 0.75rem; /* 12px */
+
+  --font-size-sm: 0.875rem; /* 14px */
+
+  --font-size-md: 1rem; /* 16px */
+
+  --font-size-lg: 1.125rem; /* 18px */
+
+  --font-size-xl: 1.5rem; /* 24px */
+
+  --font-size-2xl: 2rem; /* 32px */
+ 
+  /*
+
+   * Escala responsiva de 40px a 72px.
+
+   * Utilizada em títulos de destaque fora do Hero da loja.
+
+   */
+
+  --font-size-3xl: clamp(2.5rem, 6vw, 4.5rem);
+ 
+  /* ========================================
+
+     TYPOGRAPHY — RESPONSIVE DISPLAY SIZES
+
+     ======================================== */
+ 
+  /*
+
+   * Hero principal:
+
+   * mínimo de 44px e máximo de 92px.
+
+   */
+
+  --font-size-hero: clamp(2.75rem, 7vw, 5.75rem);
+ 
+  /*
+
+   * Hero em telas pequenas:
+
+   * mínimo de 36px e máximo de 56px.
+
+   */
+
+  --font-size-hero-mobile: clamp(2.25rem, 12vw, 3.5rem);
+ 
+  /* ========================================
+
+     TYPOGRAPHY — SEMANTIC FONT SIZES
+
+     Correspondem aos Text Styles do Figma
+
+     ======================================== */
+ 
+  --font-size-display-hero-desktop: 5.75rem; /* 92px */
+
+  --font-size-display-hero-mobile: 2.75rem; /* 44px */
+
+  --font-size-display-heading-1: 4.5rem; /* 72px */
+
+  --font-size-display-heading-2: 2rem; /* 32px */
+
+  --font-size-display-heading-3: 1.5rem; /* 24px */
+
+  --font-size-display-heading-4: 1.125rem; /* 18px */
+
+  --font-size-display-card-title: 1rem; /* 16px */
+ 
+  --font-size-body-large: 1.125rem; /* 18px */
+
+  --font-size-body-default: 1rem; /* 16px */
+
+  --font-size-body-small: 0.875rem; /* 14px */
+
+  --font-size-body-xsmall: 0.75rem; /* 12px */
+
+  --font-size-body-price: 1rem; /* 16px */
+ 
+  --font-size-label-default: 0.75rem; /* 12px */
+
+  --font-size-label-compact: 0.625rem; /* 10px */
+ 
+  /* ========================================
+
+     TYPOGRAPHY — LINE HEIGHTS
+
+     ======================================== */
+ 
+  --line-height-hero: 0.98; /* 98% */
+
+  --line-height-tight: 1.08; /* 108% */
+
+  --line-height-heading: 1.2; /* 120% */
+
+  --line-height-compact: 1.4; /* 140% */
+
+  --line-height-body: 1.65; /* 165% */
+ 
+  /* ========================================
+
+     TYPOGRAPHY — LETTER SPACING
+
+     ======================================== */
+ 
+  --letter-spacing-default: 0;
+
+  --letter-spacing-display: -0.035em; /* -3.5% */
+
+  --letter-spacing-label: 0.12em; /* 12% */
+
+  --letter-spacing-label-compact: 0.06em; /* 6% */
+ 
+  /* ========================================
+
+     SPACING
+
+     Escala baseada em múltiplos de 4px
+
+     ======================================== */
+ 
+  --space-2xs: 0.25rem; /* 4px */
+
+  --space-xs: 0.5rem; /* 8px */
+
+  --space-sm: 0.75rem; /* 12px */
+
+  --space-md: 1rem; /* 16px */
+
+  --space-lg: 1.5rem; /* 24px */
+
+  --space-xl: 2rem; /* 32px */
+
+  --space-2xl: 3rem; /* 48px */
+
+  --space-3xl: 4rem; /* 64px */
+
+  --space-4xl: 5rem; /* 80px */
+ 
+  /* ========================================
+
+     BORDER RADIUS
+
+     ======================================== */
+ 
+  --radius-sm: 0.5rem; /* 8px */
+
+  --radius-md: 0.75rem; /* 12px */
+
+  --radius-lg: 1rem; /* 16px */
+
+  --radius-xl: 1.5rem; /* 24px */
+
+  --radius-pill: 999rem;
+ 
+  /* ========================================
+
+     BORDER WIDTH
+
+     ======================================== */
+ 
+  --border-width-default: 0.0625rem; /* 1px */
+
+  --border-width-emphasis: 0.125rem; /* 2px */
+ 
+  /* ========================================
+
+     SHADOWS AND EFFECTS
+
+     ======================================== */
+ 
+  --shadow-surface: 0 1.5rem 4rem rgba(3, 2, 10, 0.28);
+
+  --shadow-focus: 0 0 0 0.1875rem rgba(35, 224, 103, 0.3);
+
+  --glow-brand: 0 0 3rem rgba(35, 224, 103, 0.14);
+ 
+  /* ========================================
+
+     MOTION
+
+     ======================================== */
+ 
+  --motion-fast: 160ms;
+
+  --motion-standard: 240ms;
+
+  --motion-slow: 420ms;
+ 
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+ 
+  /* ========================================
+
+     LAYOUT
+
+     ======================================== */
+ 
+  --content-max-width: 74rem; /* 1184px */
+
+}
+ 

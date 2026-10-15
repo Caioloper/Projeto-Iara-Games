@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - IARA GAMES</title>
+    <link rel="stylesheet" href="../assets/root.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navegacao" aria-label="Navegação principal">
+            <div class="container-header">
+                <a class="container-logo" href="../index.html" aria-label="Iara Games, página inicial">
+                    <p class="titulo-logo">IARA <span class="destaque-titulo">GAMES</span></p>
+                    <img src="../assets/imagens/flag_brasil.svg" alt="Bandeira do Brasil">
+                </a>
+                <div class="nav-links">
+                    <button class="btn-ghost" type="button"><i class="bi bi-controller" aria-hidden="true"></i> Game Zone</button>
+                    <button class="btn-ghost" type="button"><i class="bi bi-code-slash" aria-hidden="true"></i> Dev Zone</button>
+                    <a class="btn-ghost" href="./suporte.html" aria-current="page">Suporte</a>
+                </div>
+            </div>
+            <div class="header-search">
+                <label class="visually-hidden" for="game-search">Buscar jogos</label>
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input class="input-search" id="game-search" type="search" placeholder="Buscar jogo...">
+            </div>
+            <div class="header-actions">
+                <a class="icon-button" href="../em_desenvolvimento.html" aria-label="Carrinho de compras">
+                    <i class="bi bi-cart" aria-hidden="true"></i>
+                </a>
+                <a href="../pagina_criar_conta/criar_conta.html" class="btn-primary">Criar Conta</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="suporte suporte-intro" aria-labelledby="support-title">
+            <h1 id="support-title">
+                Como podemos <span>ajudar?</span>
+            </h1>
+            <p class="descricao">
+                Fale com nossa equipe e consulte exemplos de solicitações de suporte.
+            </p>
+        </section>
+
+        <div class="contato-formulario">
+            <section class="contato" id="contato" aria-labelledby="contact-title">
+                <h2 class="titulo-sessao" id="contact-title">Contato</h2>
+                <p>Entre em contato com a nossa equipe pelo formulário ou pelos nossos canais de atendimento.</p>
+
+                <div>
+                    <ul>
+                        <li>
+                            <i class="bi bi-envelope contato-item__icon"></i>
+                            <div class="contato-item__content">
+                                <h3 class="titulo">E-mail de suporte</h3>
+                                <a href="mailto:iaragames@gmail.com">iaragames@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-clock contato-item__icon"></i>
+                            <div class="contato-item__content">
+                                <h3 class="titulo">Horário de atendimento</h3>
+                                <p>Segunda a sexta, das 09h às 18h (exceto feriados).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-clock-history contato-item__icon"></i>
+                            <div class="contato-item__content">
+                                <h3 class="titulo">Tempo médio de resposta</h3>
+                                <p>Até 24 horas úteis</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="formulario" aria-labelledby="form-title">
+                <div class="formulario__cabecalho">
+                    <h2 class="titulo-sessao" id="form-title">Envie sua mensagem</h2>
+                    <p>O envio pelo formulário ainda não está disponível.</p>
+                </div>
+                <p class="formulario__aviso">
+                    Enquanto isso, fale com nossa equipe pelo
+                    <a href="mailto:iaragames@gmail.com">iaragames@gmail.com</a>.
+                </p>
+                <form>
+                    <fieldset class="formulario__campos" disabled>
+                        <legend class="visually-hidden">Formulário temporariamente indisponível</legend>
+                        <div class="formulario__titulo">
+                            <label for="nome">Seu nome</label>
+                            <input class="barra" type="text" name="nome" id="nome" placeholder="Como podemos chamar você?"
+                                required>
+                        </div>
+
+                        <div class="formulario__titulo">
+                            <label for="email">E-mail</label>
+                            <input class="barra" type="email" name="email" id="email" placeholder="você@exemplo.com"
+                                autocomplete="email" required>
+                        </div>
+
+                        <div class="formulario__titulo">
+                            <label for="assunto">Assunto</label>
+                            <select name="assunto" id="assunto" required>
+                                <option value="" selected disabled>Selecione um assunto</option>
+                                <option value="Compras">Compras</option>
+                                <option value="Reembolso">Reembolso</option>
+                                <option value="Defeito">Defeito</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="formulario__titulo">
+                            <label for="ajuda">Como podemos ajudar?</label>
+                            <textarea class="barra" name="ajuda" id="ajuda" placeholder="Conte o que aconteceu..." rows="5"
+                                required></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" disabled>Envio indisponível</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+
+        <section class="suporte suporte-tickets" id="ticket" aria-labelledby="tickets-title">
+            <h2 class="titulo-sessao" id="tickets-title"><span>Tickets</span> de exemplo</h2>
+            <p class="descricao">
+                Estes registros são demonstrativos e não estão vinculados a uma conta.
+            </p>
+            <ul class="tickets-lista" aria-label="Exemplos de tickets de suporte">
+                <li>
+                    <article class="card ticket">
+                        <div class="ticket-info">
+                            <h3>#1042 — Problema de acesso</h3>
+                            <p>Não consigo acessar minha conta.</p>
+                        </div>
+                        <span class="status aberto">Aberto</span>
+                    </article>
+                </li>
+                <li>
+                    <article class="card ticket">
+                        <div class="ticket-info">
+                            <h3>#1043 — Erro no pagamento</h3>
+                            <p>Meu pagamento foi aprovado, mas o jogo não apareceu na biblioteca.</p>
+                        </div>
+                        <span class="status andamento">Em andamento</span>
+                    </article>
+                </li>
+                <li>
+                    <article class="card ticket">
+                        <div class="ticket-info">
+                            <h3>#1044 — Reembolso</h3>
+                            <p>Minha solicitação de reembolso foi concluída.</p>
+                        </div>
+                        <span class="status resolvido">Resolvido</span>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+
+</html>

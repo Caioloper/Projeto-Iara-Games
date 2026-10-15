@@ -1,0 +1,271 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --altura-cabecalho-conta: 4.5rem;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+}
+
+.cabecalho-conta {
+  min-height: var(--altura-cabecalho-conta);
+  border-bottom: 1px solid var(--color-border-subtle);
+  background: var(--color-bg-deep);
+}
+
+.cabecalho-conta__interno {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  width: min(calc(100% - var(--content-gutter) - var(--content-gutter)), var(--content-max-width));
+  min-height: var(--altura-cabecalho-conta);
+  margin-inline: auto;
+}
+
+.marca-conta {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--space-xs);
+  min-height: 44px;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.marca-conta__nome {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+}
+
+.marca-conta__nome span {
+  color: var(--color-text-brand);
+}
+
+.marca-conta img {
+  width: 1.5rem;
+  height: 1rem;
+  object-fit: cover;
+}
+
+.voltar-inicio {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  transition: color var(--motion-fast) var(--ease-standard);
+}
+
+.voltar-inicio:hover {
+  color: var(--color-text-primary);
+}
+
+.marca-conta:focus-visible,
+.voltar-inicio:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 4px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - var(--altura-cabecalho-conta));
+  min-height: calc(100svh - var(--altura-cabecalho-conta));
+  padding: var(--space-2xl) var(--content-gutter);
+  background-color: var(--color-bg-canvas);
+  background-image: url("./Papel de parede tecnológico tropical em verde néon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.conteudo-cadastro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 30rem);
+  align-items: center;
+  gap: var(--space-2xl);
+  margin-inline: auto;
+}
+
+.destaque-criar-conta {
+  max-width: 700px;
+  white-space: normal;
+}
+
+.destaque-criar-conta h1,
+.criar-conta h2 {
+  color: var(--color-text-primary);
+  font-family: var(--font-family-display);
+  line-height: var(--line-height-heading);
+}
+
+.destaque-criar-conta h1 {
+  font-size: var(--font-size-display-heading-1);
+  font-weight: var(--font-weight-bold);
+}
+
+.criar-conta {
+  width: 100%;
+  max-width: 30rem;
+  justify-self: end;
+  padding: var(--space-lg);
+  border: 1px solid var(--color-brand-primary);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-canvas);
+  box-shadow: 1px 1px 20px var(--color-text-muted);
+}
+
+.criar-conta h2 {
+  font-size: var(--font-size-display-heading-2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.destaque-criar-conta p,
+.criar-conta p {
+  margin-top: var(--space-lg);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-default);
+  line-height: var(--line-height-body);
+}
+
+input {
+  width: 100%;
+  min-height: 45px;
+  padding: var(--space-md);
+  border: var(--border-width-default) solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-default);
+  transition: border-color var(--motion-fast) var(--ease-standard);
+}
+
+input:hover {
+  border-color: var(--color-accent-secondary-soft);
+}
+
+input:focus {
+  border-color: var(--color-border-focus);
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.email,
+.crie-senha,
+.confirme-senha {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin: var(--space-md) 0;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-small);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+}
+
+.botao-criar-conta {
+  width: 100%;
+  min-height: 48px;
+  margin-top: var(--space-sm);
+  padding: var(--space-md);
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-brand-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-default);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.botao-criar-conta:hover {
+  background-color: var(--color-brand-primary-hover);
+}
+
+.botao-criar-conta:active {
+  background-color: var(--color-brand-primary-pressed);
+}
+
+.botao-criar-conta:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 3px;
+}
+
+.entrar-com-conta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-lg);
+  color: var(--color-text-muted);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-xsmall);
+}
+
+.entrar-com-conta p {
+  margin-top: 0;
+}
+
+.entrar-com-conta span {
+  color: var(--color-text-brand);
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--space-2xl) var(--content-gutter-mobile);
+  }
+
+  .conteudo-cadastro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .destaque-criar-conta {
+    max-width: 100%;
+  }
+
+  .destaque-criar-conta h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .criar-conta {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .cabecalho-conta__interno {
+    width: calc(100% - var(--content-gutter-mobile) - var(--content-gutter-mobile));
+    gap: var(--space-xs);
+  }
+
+  .voltar-inicio {
+    font-size: var(--font-size-xs);
+  }
+}

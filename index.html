@@ -3,297 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/animations.css">
+    <link rel="stylesheet" href="./assets/root.css">
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- link fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 
     <title>Projeto Iara Games</title>
 </head>
 <body>
     <header class="header">
-        <nav class="navegacao">
+        <nav class="navegacao" aria-label="Navegação principal">
             <div class="container-header">
-                <div class="container-logo">
+                <a class="container-logo" href="./index.html" aria-label="Iara Games, página inicial">
                     <p class="titulo-logo">IARA <span class="destaque-titulo">GAMES</span></p>
                     <img src="./assets/imagens/flag_brasil.svg" alt="Bandeira do Brasil">
+                </a>
+                <div class="nav-links">
+                    <button class="btn-ghost"><i class="bi bi-controller" aria-hidden="true"></i> Game Zone</button>
+                    <button class="btn-ghost"><i class="bi bi-code-slash" aria-hidden="true"></i> Dev Zone</button>
+                    <a class="btn-ghost" href="./Suporte iara/suporte.html">Suporte</a>
                 </div>
-                <a href="./em_desenvolvimento.html">Comunidade</a>
-                <a href="./em_desenvolvimento.html">Promoções</a>
             </div>
-            <div>
-                <input class="input-search" type="search" placeholder="Buscar jogo...">
+            <div class="header-search">
+                <label class="visually-hidden" for="game-search">Buscar jogos</label>
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input class="input-search" id="game-search" type="search" placeholder="Buscar jogo...">
             </div>
-            <div class="container-header">
-                <i class="bi bi-cart icone-btn"></i>
-                <button class="btn-primary">Entrar</button>
-                <button class="btn-secondary">Criar Conta</button>
-                <i class="bi bi-list icone-btn"></i>
+            <div class="header-actions">
+                <a class="icon-button" href="./em_desenvolvimento.html" aria-label="Carrinho de compras">
+                    <i class="bi bi-cart" aria-hidden="true"></i>
+                </a>
+                <a href="./pagina_criar_conta/criar_conta.html" class="btn-primary">Criar Conta</a>
             </div>
         </nav>
     </header>
     
     <main>
         <section class="hero">
-            <h1 class="hero-title">Eclipse: Realms of Shadow</h1>
-            <p class="hero-description">Mergulhe em um mundo sombrio de conspirações e magia proibida. Uma aventura épica com mais de 80 horas de conteúdo.</p>
-            <p class="hero-price">R$ 149,90</p>
+            <h1 class="hero-title">O MELHOR DOS <span class="destaque-colorido-brasil">GAMES</span> FEITOS NO BRASIL</h1>
+            <p class="hero-description">
+                Descubra jogos incríveis criados por estúdios brasileiros. Da tradição à inovação, cada experiência carrega uma história para chamar de nossa.
+            </p>
             <div class="hero-buttons">
-                <button class="btn-primary hero-btn">Comprar Agora</button>
-                <button class="btn-secondary hero-btn">Saiba mais</button>
+                <button class="btn-primary hero-btn" type="button">Explorar Jogos <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+            </div>
+
+            <!-- Seta que aponta para baixo -->
+            <div class="hero-arrow">
+                <i class="bi bi-arrow-down" aria-hidden="true"></i>
             </div>
         </section>
 
-        <section class="sessao-main generos">
-            <h2>Explorar por Gênero</h2>
-            <ul class="generos-lista">
-                <li>
-                    <button>Ação</button>
-                </li>
-                <li>
-                    <button>RPG</button>
-                </li>
-                <li>
-                    <button>Estratégia</button>
-                </li>
-                <li>
-                    <button>Esportes</button>
-                </li>
-                <li>
-                    <button>Aventura</button>
-                </li>
-                <li>
-                    <button>Simulação</button>
-                </li>
-            </ul>
-        </section>
-
-        <section class="sessao-main">
-            <h2>Jogos em Destaque</h2>
-            <div>
-                <ul class="destaques-generos-lista">
+        <section class="section-band section-band--deep" aria-labelledby="genres-title">
+            <div class="section-inner generos">
+                <header class="section-header">
+                    <div class="section-heading-group">
+                        <h2 id="genres-title">Explorar por Gênero</h2>
+                    </div>
+                </header>
+                <ul class="generos-lista">
                     <li>
-                        <button class="btn-primary">Todos</button>
+                        <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-controller" aria-hidden="true"></i></span><span>Ação</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
                     <li>
-                        <button class="btn-genero-destaque">Ação</button>
+                        <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-shield-shaded" aria-hidden="true"></i></span><span>RPG</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
                     <li>
-                        <button class="btn-genero-destaque">RPG</button>
+                        <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span><span>Estratégia</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
                     <li>
-                        <button class="btn-genero-destaque">Estratégia</button>
+                        <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-trophy" aria-hidden="true"></i></span><span>Esportes</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
                     <li>
-                        <button class="btn-genero-destaque">Esportes</button>
+                        <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-compass" aria-hidden="true"></i></span><span>Aventura</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
                     <li>
-                        <button class="btn-genero-destaque">Aventura</button>
-                    </li>
-                    <li>
-                        <button class="btn-genero-destaque">Simulação</button>
+                        <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-joystick" aria-hidden="true"></i></span><span>Simulação</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
                 </ul>
-                <ul class="destaques-jogos-lista">
+            </div>
+        </section>
+
+        <section class="sessao-main" aria-labelledby="featured-title">
+            <header class="section-header">
+                <div class="section-heading-group">
+                    <h2 id="featured-title">Jogos em Destaque</h2>
+                    <p class="section-description">Escolhas para sua próxima aventura.</p>
+                </div>
+            </header>
+            <div class="catalog-controls">
+                <ul class="destaques-generos-lista" role="group" aria-label="Filtrar jogos por gênero" data-filter-group>
                     <li>
-                        <img src="./assets/imagens/card_vertical.jpg" alt="jogo de luta">
-                        <div class="destaques-conteiner-card">
+                        <button class="filter-chip is-selected" type="button" aria-pressed="true">Todos</button>
+                    </li>
+                    <li>
+                        <button class="filter-chip" type="button" aria-pressed="false">Ação</button>
+                    </li>
+                    <li>
+                        <button class="filter-chip" type="button" aria-pressed="false">RPG</button>
+                    </li>
+                    <li>
+                        <button class="filter-chip" type="button" aria-pressed="false">Estratégia</button>
+                    </li>
+                    <li>
+                        <button class="filter-chip" type="button" aria-pressed="false">Esportes</button>
+                    </li>
+                    <li>
+                        <button class="filter-chip" type="button" aria-pressed="false">Aventura</button>
+                    </li>
+                    <li>
+                        <button class="filter-chip" type="button" aria-pressed="false">Simulação</button>
+                    </li>
+                </ul>
+                <ul class="destaques-jogos-lista" aria-label="Jogos em destaque">
+                    <li>
+                        <article class="game-card">
+                            <img src="./assets/imagens/jogo_rpg.jpeg" alt="Ecos do Destino">
+                            <div class="destaques-conteiner-card">
                             <div>
                                 <span class="badge-genero">RPG</span>
                             </div>
-                        
-                            <h3>Realms 2</h3>
+                            <h3>Ecos do Destino</h3>
                             <div class="avaliação">
-                        <span class="estrelas">⭐ ⭐ ⭐ ⭐⭐ </span>
-                        <span class="nota">4.8</span>
-                        </div>
+                                <span class="estrelas" aria-hidden="true">★★★★★</span>
+                                <span class="nota">4,8</span>
+                            </div>
+                            <div class="game-specs">
+                                <span class="specs-label">Compatibilidade</span>
                             <div class="destaques-plataformas">
-                                <span>PC</span>
-                                <span>PS5</span> 
+                                <span class="platform-badge">PC</span>
+                                <span class="platform-badge">PS5</span>
+                            </div>
                             </div>
                             <div class="destaques-btns">
                                 <p>R$ 79,90</p>
-                                <button class="btn-primary">Comprar</button>
+                                <button class="btn-primary btn-small" type="button">Comprar</button>
                             </div>
-                        </div>   
+                            </div>
+                        </article>
                     </li>
                     <li>
-                        <img src="./assets/imagens/card_vertical.jpg" alt="jogo de luta">
-                        <div class="destaques-conteiner-card">
+                        <article class="game-card">
+                            <img src="./assets/imagens/jogo_aventura.jpeg" alt="Stellar Drift">
+                            <div class="destaques-conteiner-card">
                             <div>
                                 <span class="badge-genero">Aventura</span>
                             </div>
-                            
                             <h3>Stellar Drift</h3>
                             <div class="avaliação">
-                        <span class="estrelas">⭐ ⭐ ⭐ ⭐ ☆</span>
-                        <span class="nota">4.3</span>
-                        </div>
-                            <div class="destaques-plataformas"> 
-                                <span>PC</span> 
+                                <span class="estrelas" aria-hidden="true">★★★★☆</span>
+                                <span class="nota">4,3</span>
+                            </div>
+                            <div class="game-specs">
+                                <span class="specs-label">Compatibilidade</span>
+                                <div class="destaques-plataformas"><span class="platform-badge">PC</span></div>
                             </div>
                             <div class="destaques-btns">
                                 <p>R$ 59,90</p>
-                                <button class="btn-primary">Comprar</button>
+                                <button class="btn-primary btn-small" type="button">Comprar</button>
                             </div>
-                        </div>
+                            </div>
+                        </article>
                     </li>
                     <li>
-                        <img src="./assets/imagens/card_vertical.jpg" alt="jogo de luta">
-                        <div class="destaques-conteiner-card">
+                        <article class="game-card">
+                            <img src="./assets/imagens/jogo_estrategia.jpeg" alt="Iron Throne">
+                            <div class="destaques-conteiner-card">
                             <div>
                                 <span class="badge-genero">Estratégia</span>
                             </div>
-                            <h3>Iron throne</h3>
+                            <h3>Iron Throne</h3>
                             <div class="avaliação">
-                        <span class="estrelas">⭐ ⭐ ⭐ ⭐ ⭐</span>
-                        <span class="nota">4.9</span>
-                        </div>
-                            <div class="destaques-plataformas"> 
-                                <span>Xbox</span> 
+                                <span class="estrelas" aria-hidden="true">★★★★★</span>
+                                <span class="nota">4,9</span>
+                            </div>
+                            <div class="game-specs">
+                                <span class="specs-label">Compatibilidade</span>
+                                <div class="destaques-plataformas"><span class="platform-badge">Xbox</span></div>
                             </div>
                             <div class="destaques-btns">
                                 <p>R$ 49,90</p>
-                                <button class="btn-primary">Comprar</button>
+                                <button class="btn-primary btn-small" type="button">Comprar</button>
                             </div>
-                        </div>
+                            </div>
+                        </article>
                     </li>
                     <li>
-                        <img src="./assets/imagens/card_vertical.jpg" alt="jogo de luta">
-                        <div class="destaques-conteiner-card">
+                        <article class="game-card">
+                            <img src="./assets/imagens/jogo_fps.jpeg" alt="Aura Strike">
+                            <div class="destaques-conteiner-card">
                             <div>
                                 <span class="badge-genero">FPS</span>
                             </div>
-                            <h3>Shadow Protocol</h3>
+                            <h3>Aura Strike</h3>
                             <div class="avaliação">
-                        <span class="estrelas">⭐ ⭐ ⭐ ⭐ ☆</span>
-                        <span class="nota">4.6</span>
-                        </div>
-                            <div class="destaques-plataformas"> 
-                                <span>PC</span>
-                                <span>PS5</span> 
-                                <span>Xbox</span> 
+                                <span class="estrelas" aria-hidden="true">★★★★☆</span>
+                                <span class="nota">4,6</span>
+                            </div>
+                            <div class="game-specs">
+                                <span class="specs-label">Compatibilidade</span>
+                                <div class="destaques-plataformas">
+                                    <span class="platform-badge">PC</span>
+                                    <span class="platform-badge">PS5</span>
+                                    <span class="platform-badge">Xbox</span>
+                                </div>
                             </div>
                             <div class="destaques-btns">
                                 <p>R$ 99,90</p>
-                                <button class="btn-primary">Comprar</button>
+                                <button class="btn-primary btn-small" type="button">Comprar</button>
                             </div>
-                        </div>
+                            </div>
+                        </article>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="sessao-main sobre-projeto">
+        <section class="sessao-main sobre-projeto" aria-labelledby="about-title">
             <img src="./assets/imagens/Logo IG.png" alt="Logo Iara Games">
             <div>
                 <span class="sobre-projeto-badge">Sobre o Projeto</span>
-                <h2 class="sobre-projeto-title">Conheça a Iara Games</h2>
-                <p class="sobre-projeto-description">Nascemos com a missão de democratizar o acesso a jogos digitais no Brasil. Plataforma 100% brasileira, com suporte local, pagamentos em reais e curadoria feita por gamers de verdade.</p>
+                <h2 class="sobre-projeto-title" id="about-title">Conheça a Iara Games</h2>
+                <p class="sobre-projeto-description">O Brasil é o país dos gamers. Está na hora de termos uma plataforma que finalmente jogue no nosso time.</p>
+                <p class="sobre-projeto-description">Nascemos com um propósito maior: democratizar o acesso aos jogos digitais no nosso país, provando que a nossa comunidade merece o melhor cenário possível. Somos uma plataforma 100% brasileira, feita de ponta a ponta para a nossa realidade. Chega de barreiras! Aqui, você tem suporte local que fala a sua língua, pagamentos diretos em Reais e uma curadoria cuidadosa, feita por gamers de verdade que compartilham da mesma paixão que você.</p>
+                <p class="sobre-projeto-description">Juntos, estamos construindo o futuro dos games no Brasil. Esta conquista é nossa. Jogue com orgulho.</p>
             </div>
-            <button class="btn-secondary sobre-projeto-btn">Saiba mais</button>
+            <button class="btn-secondary sobre-projeto-btn" type="button">Saiba mais</button>
         </section> 
-        <section class="sessao-main">
-            <h2>Ofertas Especiais</h2>
+        <section class="sessao-main" aria-labelledby="offers-title">
+            <header class="section-header">
+                <div class="section-heading-group">
+                    <p class="section-eyebrow">Por tempo limitado</p>
+                    <h2 id="offers-title">Ofertas Especiais</h2>
+                </div>
+            </header>
             <div>
-                <ul class="destaques-jogos-lista">
+                <ul class="destaques-jogos-lista lista-ofertas" aria-label="Jogos em oferta">
                     <li>
-                        <img src="./assets/imagens/card_horizontal.jpg" alt="jogo de luta">
-                        <div class="destaques-conteiner-card">
+                        <article class="game-card">
+                            <img src="./assets/imagens/jogo_rpg_destaque.jpeg" alt="Cinzas de Eldoria">
+                            <div class="destaques-conteiner-card">
                             <div>
-                                <span class="badge-genero label-promocao">RPG</span>
+                                <span class="badge-genero">RPG</span>
                             </div>
-                            <h3>Cyber Exodus</h3>
+                            <h3>Cinzas de Eldoria</h3>
                             <div class="avaliação">
-                        <span class="estrelas">⭐ ⭐ ⭐ ⭐ ⭐</span>
-                        <span class="nota">4.9</span>
-                        </div>
-                            <div class="destaques-plataformas"> 
-                                <span>PC</span>
-                                <span>PS5</span> 
+                                <span class="estrelas" aria-hidden="true">★★★★★</span>
+                                <span class="nota">4,9</span>
                             </div>
+                            <div class="game-specs"><span class="specs-label">Compatibilidade</span><div class="destaques-plataformas"><span class="platform-badge">PC</span><span class="platform-badge">PS5</span></div></div>
                             <div class="destaques-btns">
-                                <p class="label-promocao">R$ 39,90</p>
-                                <button class="btn-primary promocao">Comprar</button>
+                                <p class="offer-price">R$ 39,90</p>
+                                <button class="btn-primary btn-small" type="button">Comprar</button>
                             </div>
-                        </div>
+                            </div>
+                        </article>
                     </li>
                     <li>
-                        <img src="./assets/imagens/card_horizontal.jpg" alt="jogo de luta">
-                        <div class="destaques-conteiner-card">
+                        <article class="game-card">
+                            <img src="./assets/imagens/jogo_acao_destaque.jpeg" alt="Cyber Exodus">
+                            <div class="destaques-conteiner-card">
                             <div>
-                                <span class="badge-genero label-promocao">RPG</span>
+                                <span class="badge-genero">AÇÃO</span>
                             </div>
                             <h3>Cyber Exodus</h3>
                             <div class="avaliação">
-                        <span class="estrelas">⭐ ⭐ ⭐ ⭐ ⭐</span>
-                        <span class="nota">4.9</span>
-                        </div>
-                            <div class="destaques-plataformas"> 
-                                <span>PC</span>
-                                <span>PS5</span> 
+                                <span class="estrelas" aria-hidden="true">★★★★★</span>
+                                <span class="nota">4,9</span>
                             </div>
+                            <div class="game-specs"><span class="specs-label">Compatibilidade</span><div class="destaques-plataformas"><span class="platform-badge">PC</span><span class="platform-badge">PS5</span></div></div>
                             <div class="destaques-btns">
-                                <p class="label-promocao">R$ 39,90</p>
-                                <button class="btn-primary promocao">Comprar</button>
+                                <p class="offer-price">R$ 39,90</p>
+                                <button class="btn-primary btn-small" type="button">Comprar</button>
                             </div>
-                        </div>
+                            </div>
+                        </article>
                     </li>
                     <li>
-                        <img src="./assets/imagens/card_horizontal.jpg" alt="jogo de luta">
-                        <div class="destaques-conteiner-card">
+                        <article class="game-card">
+                            <img src="./assets/imagens/card_horizontal.jpg" alt="Carbon Burnout">
+                            <div class="destaques-conteiner-card">
                             <div>
-                                <span class="badge-genero label-promocao">RPG</span>
+                                <span class="badge-genero">SIMULAÇÃO</span>
                             </div>
-                            <h3>Cyber Exodus</h3>
+                            <h3>Carbon Burnout</h3>
                             <div class="avaliação">
-                        <span class="estrelas">⭐ ⭐ ⭐ ⭐ ⭐</span>
-                        <span class="nota">4.9</span>
-                        </div>
-                            <div class="destaques-plataformas"> 
-                                <span>PC</span>
-                                <span>PS5</span> 
+                                <span class="estrelas" aria-hidden="true">★★★★★</span>
+                                <span class="nota">4,9</span>
                             </div>
+                            <div class="game-specs"><span class="specs-label">Compatibilidade</span><div class="destaques-plataformas"><span class="platform-badge">PC</span><span class="platform-badge">PS5</span></div></div>
                             <div class="destaques-btns">
-                                <p class="label-promocao">R$ 39,90</p>
-                                <button class="btn-primary promocao">Comprar</button>
+                                <p class="offer-price">R$ 39,90</p>
+                                <button class="btn-primary btn-small" type="button">Comprar</button>
                             </div>
-                        </div>
+                            </div>
+                        </article>
                     </li>
                     
                 </ul>
             </div>
         </section>
 
-        <section class="sessao-main newsletter">
-            <h2>Fique por dentro das novidades</h2>
-            <p class="newsletter-description">Receba alertas de promoções, lançamentos e cupons exclusivos direto no seu e-mail.</p>
-            <div class="newsletter-form-container">
-                <input class="input-email" type="email" placeholder="seu@email.com">
-                <button class="btn-primary newsletter-btn">Inscrever-se</button>
+        <section class="section-band section-band--deep" aria-labelledby="newsletter-title">
+            <div class="section-inner newsletter">
+                <h2 id="newsletter-title">Fique por dentro das novidades</h2>
+                <p class="newsletter-description">Receba alertas de promoções, lançamentos e cupons exclusivos direto no seu e-mail.</p>
+                <div class="newsletter-form-container">
+                    <div class="newsletter-field">
+                        <label class="input-label" for="newsletter-email">Seu e-mail</label>
+                        <input class="input-email" id="newsletter-email" type="email" autocomplete="email" placeholder="seu@email.com">
+                    </div>
+                    <button class="btn-primary newsletter-btn" type="button">Inscrever-se</button>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container-logo">
-            <p class="titulo-logo">IARA <span class="destaque-titulo">GAMES</span></p>
-            <img src="./assets/imagens/flag_brasil.svg" alt="Bandeira do Brasil">
-        </div>
-        <p>A maior loja de jogos digitais do Brasil. Chaves originais, entrega instantânea e preços imbatíveis. </p>
-        <!-- icones de rede sociais -->
-        <ul class="lista-midias">
-            <li><a href="#" target="_blank"><i class="bi bi-facebook"></i></a></li>
-            <li><a href="#" target="_blank"><i class="bi bi-instagram"></i></a></li>
-            <li><a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
-        </ul>
-        <div class="copy-container">
-            <p>© 2026 Iara Games. Todos os direitos reservados. CNPJ 00.000.000/0001-00</p>
-            <p>Desenvolvido com 💚 no Brasil</p>
+    <footer class="section-band section-band--deep footer">
+        <div class="section-inner footer-content">
+            <div class="container-logo">
+                <p class="titulo-logo">IARA <span class="destaque-titulo">GAMES</span></p>
+                <img src="./assets/imagens/flag_brasil.svg" alt="Bandeira do Brasil">
+            </div>
+            <!-- Mensagem incentivadora do proposito da marca -->
+            <p>Uma plataforma que surgiu para iluminar o universo dos jogos digitais no Brasil.</p>
+            <!-- icones de rede sociais -->
+            <ul class="lista-midias">
+                <li><a href="./em_desenvolvimento.html" aria-label="Facebook da Iara Games"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="./em_desenvolvimento.html" aria-label="Instagram da Iara Games"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="./em_desenvolvimento.html" aria-label="X da Iara Games"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+            </ul>
+            <div class="copy-container">
+                <p>© 2026 Iara Games. Todos os direitos reservados. CNPJ 00.000.000/0001-00</p>
+                <p>Desenvolvido com 💚 no Brasil</p>
+            </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/home.js" defer></script>
 </body>
 </html>
