@@ -130,9 +130,7 @@ button:disabled,
 }
 
 .container-logo img {
-  width: 1.5rem;
-  height: 1rem;
-  object-fit: cover;
+  width: 200px;
 }
 
 .titulo-logo {
@@ -313,7 +311,7 @@ button:disabled,
   justify-content: center;
   padding: var(--space-4xl) max(var(--content-gutter), calc((100% - var(--content-max-width)) / 2));
   /* O overlay mantém o título legível sobre a arte local em diferentes recortes. */
-  background-image: linear-gradient(90deg, rgba(13, 11, 24, 0.94) 0%, rgba(13, 11, 24, 0.74) 48%, rgba(13, 11, 24, 0.14) 100%), url('../assets/imagens/background_hero.jpg');
+  background-image: linear-gradient(90deg, #090817C2 0%, #09081761 50%, #0908170D 82%), url('../../assets/imagens/fundo_amanhecer.jpeg');
   background-position: center;
   background-size: cover;
 }

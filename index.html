@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/animations.css">
-    <link rel="stylesheet" href="./assets/root.css">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="icon" href="./assets/imagens/favicon/principal.png" sizes="any">
+    <link rel="stylesheet" href="./assets/estilos/animations.css">
+    <link rel="stylesheet" href="./assets/estilos/root.css">
+    <link rel="stylesheet" href="./assets/estilos/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,13 +20,12 @@
         <nav class="navegacao" aria-label="Navegação principal">
             <div class="container-header">
                 <a class="container-logo" href="./index.html" aria-label="Iara Games, página inicial">
-                    <p class="titulo-logo">IARA <span class="destaque-titulo">GAMES</span></p>
-                    <img src="./assets/imagens/flag_brasil.svg" alt="Bandeira do Brasil">
+                    <img src="./assets/imagens/logo_principal.png" alt="Logo Iara Games">
                 </a>
                 <div class="nav-links">
                     <button class="btn-ghost"><i class="bi bi-controller" aria-hidden="true"></i> Game Zone</button>
                     <button class="btn-ghost"><i class="bi bi-code-slash" aria-hidden="true"></i> Dev Zone</button>
-                    <a class="btn-ghost" href="./Suporte iara/suporte.html">Suporte</a>
+                    <a class="btn-ghost" href="./suporte.html" aria-label="Suporte">Suporte</a>
                 </div>
             </div>
             <div class="header-search">
@@ -37,16 +37,21 @@
                 <a class="icon-button" href="./em_desenvolvimento.html" aria-label="Carrinho de compras">
                     <i class="bi bi-cart" aria-hidden="true"></i>
                 </a>
-                <a href="./pagina_criar_conta/criar_conta.html" class="btn-primary">Criar Conta</a>
+                <a href="./criar_conta.html" class="btn-primary" aria-label="Criar Conta">Criar Conta</a>
             </div>
         </nav>
     </header>
     
     <main>
         <section class="hero">
-            <h1 class="hero-title">O MELHOR DOS <span class="destaque-colorido-brasil">GAMES</span> FEITOS NO BRASIL</h1>
+            <!-- botao que muda o fundo para noite ou dia -->
+            <button class="btn-ghost hero-theme-toggle" aria-label="Alternar tema">
+                <i class="bi bi-moon" aria-hidden="true"></i> Ver anoitecer
+            </button>
+
+            <h1 class="hero-title">MERGULHE NO MELHOR DOS <span class="destaque-colorido-brasil">GAMES</span> BRASILEIROS</h1>
             <p class="hero-description">
-                Descubra jogos incríveis criados por estúdios brasileiros. Da tradição à inovação, cada experiência carrega uma história para chamar de nossa.
+                Explore novos universos, encontre talentos nacionais e descubra as histórias que estão transformando a cena brasileira.
             </p>
             <div class="hero-buttons">
                 <button class="btn-primary hero-btn" type="button">Explorar Jogos <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
@@ -224,7 +229,7 @@
         </section>
 
         <section class="sessao-main sobre-projeto" aria-labelledby="about-title">
-            <img src="./assets/imagens/Logo IG.png" alt="Logo Iara Games">
+            <img src="./assets/imagens/logo_icone.png" alt="Logo Iara Games">
             <div>
                 <span class="sobre-projeto-badge">Sobre o Projeto</span>
                 <h2 class="sobre-projeto-title" id="about-title">Conheça a Iara Games</h2>
@@ -325,8 +330,7 @@
     <footer class="section-band section-band--deep footer">
         <div class="section-inner footer-content">
             <div class="container-logo">
-                <p class="titulo-logo">IARA <span class="destaque-titulo">GAMES</span></p>
-                <img src="./assets/imagens/flag_brasil.svg" alt="Bandeira do Brasil">
+                <img src="./assets/imagens/logotipo.png" alt="Bandeira do Brasil">
             </div>
             <!-- Mensagem incentivadora do proposito da marca -->
             <p>Uma plataforma que surgiu para iluminar o universo dos jogos digitais no Brasil.</p>

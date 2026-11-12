@@ -87,7 +87,7 @@ body {
   min-height: calc(100svh - var(--altura-cabecalho-conta));
   padding: var(--space-2xl) var(--content-gutter);
   background-color: var(--color-bg-canvas);
-  background-image: url("./Papel de parede tecnológico tropical em verde néon.png");
+  background-image: url("../../imagens/fundo-tropical.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
