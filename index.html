@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/imagens/favicon/principal.png" sizes="any">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/estilos/animations.css">
     <link rel="stylesheet" href="./assets/estilos/root.css">
     <link rel="stylesheet" href="./assets/estilos/style.css">
@@ -16,88 +17,101 @@
     <title>Projeto Iara Games</title>
 </head>
 <body>
+    <div class="page-shell">
     <header class="header">
-        <nav class="navegacao" aria-label="Navegação principal">
+        <nav class="navegacao navbar navbar-expand-lg container-xxl" aria-label="Navegação principal">
             <div class="container-header">
                 <a class="container-logo" href="./index.html" aria-label="Iara Games, página inicial">
                     <img src="./assets/imagens/logo_principal.png" alt="Logo Iara Games">
                 </a>
-                <div class="nav-links">
+                <button class="navbar-toggler header-menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Alternar menu de navegação">
+                    <i class="bi bi-list" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="nav-links collapse navbar-collapse" id="main-navigation">
                     <button class="btn-ghost"><i class="bi bi-controller" aria-hidden="true"></i> Game Zone</button>
                     <button class="btn-ghost"><i class="bi bi-code-slash" aria-hidden="true"></i> Dev Zone</button>
                     <a class="btn-ghost" href="./suporte.html" aria-label="Suporte">Suporte</a>
-                </div>
-            </div>
-            <div class="header-search">
-                <label class="visually-hidden" for="game-search">Buscar jogos</label>
-                <i class="bi bi-search" aria-hidden="true"></i>
-                <input class="input-search" id="game-search" type="search" placeholder="Buscar jogo...">
+                    <a class="btn-ghost mobile-menu-item" href="./em_desenvolvimento.html"><i class="bi bi-shop" aria-hidden="true"></i> Loja</a>
+                    <a class="btn-ghost mobile-menu-item" href="./login.html"><i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Login</a>
+                    <a class="btn-ghost mobile-menu-item" href="./criar_conta.html"><i class="bi bi-person-plus" aria-hidden="true"></i> Criar conta</a>
             </div>
             <div class="header-actions">
                 <a class="icon-button" href="./em_desenvolvimento.html" aria-label="Carrinho de compras">
                     <i class="bi bi-cart" aria-hidden="true"></i>
                 </a>
-                <a href="./criar_conta.html" class="btn-primary" aria-label="Criar Conta">Criar Conta</a>
+                <div class="dropdown">
+                    <button class="icon-button dropdown-toggle account-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Abrir menu da conta">
+                        <i class="bi bi-person" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end account-menu">
+                        <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="./criar_conta.html">Criar conta</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     
     <main>
-        <section class="hero">
-            <!-- botao que muda o fundo para noite ou dia -->
-            <button class="btn-ghost hero-theme-toggle" aria-label="Alternar tema">
-                <i class="bi bi-moon" aria-hidden="true"></i> Ver anoitecer
+        <section class="hero" data-theme="dawn">
+            <div class="hero-night-background" aria-hidden="true"></div>
+            <button class="btn-ghost hero-theme-toggle" type="button" aria-label="Alternar para o anoitecer" aria-pressed="false">
+                <i class="bi bi-moon" aria-hidden="true"></i>
+                <span data-theme-label>Ver anoitecer</span>
             </button>
 
             <h1 class="hero-title">MERGULHE NO MELHOR DOS <span class="destaque-colorido-brasil">GAMES</span> BRASILEIROS</h1>
             <p class="hero-description">
                 Explore novos universos, encontre talentos nacionais e descubra as histórias que estão transformando a cena brasileira.
             </p>
-            <div class="hero-buttons">
-                <button class="btn-primary hero-btn" type="button">Explorar Jogos <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
-            </div>
-
-            <!-- Seta que aponta para baixo -->
-            <div class="hero-arrow">
+            <a class="hero-scroll-cue" href="#genres">
+                <span class="hero-scroll-cue-time">0 M</span>
                 <i class="bi bi-arrow-down" aria-hidden="true"></i>
-            </div>
+                <span>Role para mergulhar</span>
+            </a>
         </section>
 
-        <section class="section-band section-band--deep" aria-labelledby="genres-title">
+        <section id="genres" class="section-band section-band--deep section-band--genres section-with-bubble" aria-labelledby="genres-title">
             <div class="section-inner generos">
                 <header class="section-header">
                     <div class="section-heading-group">
-                        <h2 id="genres-title">Explorar por Gênero</h2>
+                        <p class="section-depth">12 M · Zona iluminada</p>
+                        <p class="section-eyebrow">Primeira imersão</p>
+                        <h2 id="genres-title">Por onde você quer explorar?</h2>
+                        <p class="section-description">Escolha uma corrente e encontre experiências que combinam com o seu jeito de jogar.</p>
                     </div>
                 </header>
-                <ul class="generos-lista">
-                    <li>
+                <ul class="generos-lista row g-3">
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-controller" aria-hidden="true"></i></span><span>Ação</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
-                    <li>
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-shield-shaded" aria-hidden="true"></i></span><span>RPG</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
-                    <li>
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span><span>Estratégia</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
-                    <li>
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-trophy" aria-hidden="true"></i></span><span>Esportes</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
-                    <li>
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-compass" aria-hidden="true"></i></span><span>Aventura</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
-                    <li>
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <button class="genre-card" type="button"><span class="genre-icon"><i class="bi bi-joystick" aria-hidden="true"></i></span><span>Simulação</span><i class="bi bi-arrow-right genre-arrow" aria-hidden="true"></i></button>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="sessao-main" aria-labelledby="featured-title">
+        <section class="sessao-main game-catalog-section section-with-bubble" aria-labelledby="featured-title">
             <header class="section-header">
                 <div class="section-heading-group">
-                    <h2 id="featured-title">Jogos em Destaque</h2>
-                    <p class="section-description">Escolhas para sua próxima aventura.</p>
+                    <p class="section-depth">29 M · Recife de descobertas</p>
+                    <p class="section-eyebrow">Zona de descobertas</p>
+                    <h2 id="featured-title">Tesouros que vieram à superfície</h2>
+                    <p class="section-description">Produções nacionais selecionadas para você encontrar algo que ainda não conhece.</p>
                 </div>
             </header>
             <div class="catalog-controls">
@@ -124,8 +138,8 @@
                         <button class="filter-chip" type="button" aria-pressed="false">Simulação</button>
                     </li>
                 </ul>
-                <ul class="destaques-jogos-lista" aria-label="Jogos em destaque">
-                    <li>
+                <ul class="destaques-jogos-lista row g-3" aria-label="Jogos em destaque">
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <article class="game-card">
                             <img src="./assets/imagens/jogo_rpg.jpeg" alt="Ecos do Destino">
                             <div class="destaques-conteiner-card">
@@ -133,6 +147,7 @@
                                 <span class="badge-genero">RPG</span>
                             </div>
                             <h3>Ecos do Destino</h3>
+                            <p class="game-studio"><span>Uirapuru Studio</span><span class="game-studio-separator" aria-hidden="true">•</span><span>Manaus, AM</span></p>
                             <div class="avaliação">
                                 <span class="estrelas" aria-hidden="true">★★★★★</span>
                                 <span class="nota">4,8</span>
@@ -151,7 +166,7 @@
                             </div>
                         </article>
                     </li>
-                    <li>
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <article class="game-card">
                             <img src="./assets/imagens/jogo_aventura.jpeg" alt="Stellar Drift">
                             <div class="destaques-conteiner-card">
@@ -159,6 +174,7 @@
                                 <span class="badge-genero">Aventura</span>
                             </div>
                             <h3>Stellar Drift</h3>
+                            <p class="game-studio"><span>Lua Nova Games</span><span class="game-studio-separator" aria-hidden="true">•</span><span>Recife, PE</span></p>
                             <div class="avaliação">
                                 <span class="estrelas" aria-hidden="true">★★★★☆</span>
                                 <span class="nota">4,3</span>
@@ -174,7 +190,7 @@
                             </div>
                         </article>
                     </li>
-                    <li>
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <article class="game-card">
                             <img src="./assets/imagens/jogo_estrategia.jpeg" alt="Iron Throne">
                             <div class="destaques-conteiner-card">
@@ -182,6 +198,7 @@
                                 <span class="badge-genero">Estratégia</span>
                             </div>
                             <h3>Iron Throne</h3>
+                            <p class="game-studio"><span>Ponte Digital</span><span class="game-studio-separator" aria-hidden="true">•</span><span>Brasília, DF</span></p>
                             <div class="avaliação">
                                 <span class="estrelas" aria-hidden="true">★★★★★</span>
                                 <span class="nota">4,9</span>
@@ -197,7 +214,7 @@
                             </div>
                         </article>
                     </li>
-                    <li>
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <article class="game-card">
                             <img src="./assets/imagens/jogo_fps.jpeg" alt="Aura Strike">
                             <div class="destaques-conteiner-card">
@@ -205,6 +222,7 @@
                                 <span class="badge-genero">FPS</span>
                             </div>
                             <h3>Aura Strike</h3>
+                            <p class="game-studio"><span>Mata Adentro</span><span class="game-studio-separator" aria-hidden="true">•</span><span>Belém, PA</span></p>
                             <div class="avaliação">
                                 <span class="estrelas" aria-hidden="true">★★★★☆</span>
                                 <span class="nota">4,6</span>
@@ -228,27 +246,29 @@
             </div>
         </section>
 
-        <section class="sessao-main sobre-projeto" aria-labelledby="about-title">
+        <section class="sessao-main sobre-projeto section-with-bubble" aria-labelledby="about-title">
             <img src="./assets/imagens/logo_icone.png" alt="Logo Iara Games">
             <div>
-                <span class="sobre-projeto-badge">Sobre o Projeto</span>
-                <h2 class="sobre-projeto-title" id="about-title">Conheça a Iara Games</h2>
+                <span class="sobre-projeto-badge">Nossa correnteza</span>
+                <h2 class="sobre-projeto-title" id="about-title">Há um oceano de histórias brasileiras esperando para ser descoberto</h2>
                 <p class="sobre-projeto-description">O Brasil é o país dos gamers. Está na hora de termos uma plataforma que finalmente jogue no nosso time.</p>
                 <p class="sobre-projeto-description">Nascemos com um propósito maior: democratizar o acesso aos jogos digitais no nosso país, provando que a nossa comunidade merece o melhor cenário possível. Somos uma plataforma 100% brasileira, feita de ponta a ponta para a nossa realidade. Chega de barreiras! Aqui, você tem suporte local que fala a sua língua, pagamentos diretos em Reais e uma curadoria cuidadosa, feita por gamers de verdade que compartilham da mesma paixão que você.</p>
                 <p class="sobre-projeto-description">Juntos, estamos construindo o futuro dos games no Brasil. Esta conquista é nossa. Jogue com orgulho.</p>
             </div>
             <button class="btn-secondary sobre-projeto-btn" type="button">Saiba mais</button>
         </section> 
-        <section class="sessao-main" aria-labelledby="offers-title">
+        <section class="sessao-main game-catalog-section section-with-bubble" aria-labelledby="offers-title">
             <header class="section-header">
                 <div class="section-heading-group">
-                    <p class="section-eyebrow">Por tempo limitado</p>
-                    <h2 id="offers-title">Ofertas Especiais</h2>
+                    <p class="section-depth">52 M · Águas profundas</p>
+                    <p class="section-eyebrow">Achados das profundezas</p>
+                    <h2 id="offers-title">Ofertas bioluminescentes</h2>
+                    <p class="section-description">Oportunidades selecionadas que brilham por tempo limitado.</p>
                 </div>
             </header>
             <div>
-                <ul class="destaques-jogos-lista lista-ofertas" aria-label="Jogos em oferta">
-                    <li>
+                <ul class="destaques-jogos-lista lista-ofertas row g-3" aria-label="Jogos em oferta">
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <article class="game-card">
                             <img src="./assets/imagens/jogo_rpg_destaque.jpeg" alt="Cinzas de Eldoria">
                             <div class="destaques-conteiner-card">
@@ -268,7 +288,7 @@
                             </div>
                         </article>
                     </li>
-                    <li>
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <article class="game-card">
                             <img src="./assets/imagens/jogo_acao_destaque.jpeg" alt="Cyber Exodus">
                             <div class="destaques-conteiner-card">
@@ -288,7 +308,7 @@
                             </div>
                         </article>
                     </li>
-                    <li>
+                    <li class="col-12 col-sm-6 col-lg-4">
                         <article class="game-card">
                             <img src="./assets/imagens/card_horizontal.jpg" alt="Carbon Burnout">
                             <div class="destaques-conteiner-card">
@@ -315,8 +335,9 @@
 
         <section class="section-band section-band--deep" aria-labelledby="newsletter-title">
             <div class="section-inner newsletter">
-                <h2 id="newsletter-title">Fique por dentro das novidades</h2>
-                <p class="newsletter-description">Receba alertas de promoções, lançamentos e cupons exclusivos direto no seu e-mail.</p>
+                <p class="section-eyebrow">Sinal das profundezas</p>
+                <h2 id="newsletter-title">Novas descobertas chegam até você</h2>
+                <p class="newsletter-description">Receba curadorias, lançamentos e histórias de quem cria jogos no Brasil.</p>
                 <div class="newsletter-form-container">
                     <div class="newsletter-field">
                         <label class="input-label" for="newsletter-email">Seu e-mail</label>
@@ -346,5 +367,8 @@
             </div>
         </div>
     </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./assets/home.js" defer></script>
 </body>
 </html>

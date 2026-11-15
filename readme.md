@@ -1,9 +1,9 @@
-# 🎮 Iara Games — Sprint 2
+# 🎮 Iara Games — Sprint 3
 
 > **Descubra jogos incríveis criados por desenvolvedoras brasileiras.**  
 > Da cena indie ao estúdio emergente — ampliando a visibilidade e conectando a cultura gamer nacional.
 
-![Status](https://img.shields.io/badge/status-Sprint%202%20Conclu%C3%ADda-brightgreen)
+![Status](https://img.shields.io/badge/status-Sprint%203%20Conclu%C3%ADda-brightgreen)
 ![Projeto](https://img.shields.io/badge/projeto-Acad%C3%AAmico-blueviolet)
 ![FIAP](https://img.shields.io/badge/FIAP-Web%20Design-orange)
 
@@ -32,6 +32,13 @@ A **Iara Games** é uma plataforma digital de distribuição e venda de jogos cr
 * **Acessibilidade:** Diretrizes aplicadas para leitores de tela, baixo contraste, dislexia, espectro autista e deficiência motora.
 * **Mapeamento de Persona:** Definição da persona principal (*Lucas Almeida, 24 anos*) e princípios Heurísticos de Nielsen.
 
+### 🟣 Sprint 3 (Protótipo & Responsividade)
+* **Visual:** Home aproximada do protótipo, com nova composição da hero, atmosfera oceânica, profundidades e textos das seções.
+* **Catálogo:** Cards de gêneros, destaques e ofertas redimensionados sem perder os jogos e conteúdos já existentes.
+* **Interação:** Hero com alternância entre amanhecer e anoitecer, incluindo transição suave e controle acessível.
+* **Responsividade:** Header com menu hamburguer em telas menores, mantendo Loja e Criar conta dentro do menu mobile.
+* **Bootstrap:** Utilizado na estrutura responsiva, grid, collapse, dropdowns e ícones; a identidade visual continua nos tokens e CSS customizados.
+
 ---
 
 ## 👥 Persona Principal
@@ -49,7 +56,7 @@ A interface segue uma estética **Dark Mode** moderna e imersiva voltada ao púb
 * **Tipografia:** `Orbitron` (Títulos e elementos futuristas) | `Inter` (Corpo e alta legibilidade).
 * **Acessibilidade de Cores:** Analisadas no Adobe Color para alto contraste e diferenciação visual.
 
-### Paleta de Cores (Sprint 2)
+### Paleta de Cores
 
 | Aplicação | Token | Hexadecimal |
 | :--- | :--- | :--- |
@@ -77,9 +84,12 @@ O projeto priorizou boas práticas de acessibilidade e inclusão digital:
 ```text
 ├── index.html        # Página Principal (Home)
 ├── suporte.html      # Central de Ajuda e Tickets
-├── criar-conta.html  # Formulários de Cadastro / Login
-├── css/              # Estilização e Tokens Visuais
-└── assets/           # Imagens, Ícones e Recursos
+├── criar_conta.html  # Formulários de Cadastro / Login
+├── assets/
+│   ├── estilos/      # Estilos, tokens e páginas específicas
+│   ├── imagens/      # Imagens e recursos visuais
+│   └── home.js       # Filtros e alternância da hero
+└── comparacao-prototipo.md
 ```
 
 ## 🔗 Links Oficiais do Projeto

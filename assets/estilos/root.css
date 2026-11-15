@@ -16,6 +16,7 @@
   --color-accent-secondary: #2e2285;
   --color-accent-secondary-soft: #4738aa;
   --color-accent-secondary-wash: rgba(46, 34, 133, 0.46);
+  --color-ocean-transition: #0b4658;
 
   /* ========================================
      COLORS — BACKGROUNDS AND SURFACES
@@ -42,7 +43,7 @@
      COLORS — TEXT
      ======================================== */
 
-  --color-text-primary: #eff1f3;
+  --color-text-primary: #e8e6d9;;
   --color-text-secondary: #aab3c2;
   --color-text-muted: #77849a;
   --color-text-brand: #23e067;
@@ -200,6 +201,7 @@
   --motion-fast: 160ms;
   --motion-standard: 240ms;
   --motion-slow: 420ms;
+  --motion-hero-theme: 1.6s;
 
   --ease-standard: cubic-bezier(0.2, 0, 0, 1);
 
@@ -218,4 +220,7 @@
   --content-max-width: 74rem; /* 1184px */
   --content-gutter: 1.5rem; /* 24px */
   --content-gutter-mobile: 1rem; /* 16px */
+  --header-height: 5.0625rem; /* 81px */
+  --hero-height: max(34rem, calc(100svh - var(--header-height)));
+  --gradient-page-atmosphere: linear-gradient(180deg, #0b4658 0%, #10314d 10%, #111b3f 34%, #141122 58%, #090817 100%);
 }

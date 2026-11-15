@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suporte - IARA GAMES</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/estilos/root.css">
     <link rel="stylesheet" href="./assets/estilos/style.css">
     <link rel="stylesheet" href="./assets/estilos/suporte/suporte.css">
@@ -13,27 +14,36 @@
 
 <body>
     <header class="header">
-        <nav class="navegacao" aria-label="Navegação principal">
+        <nav class="navegacao navbar navbar-expand-lg container-xxl" aria-label="Navegação principal">
             <div class="container-header">
                 <a class="container-logo" href="./index.html" aria-label="Iara Games, página inicial">
                     <img src="./assets/imagens/logo_principal.png" alt="Logo Iara Games">
                 </a>
-                <div class="nav-links">
+                <button class="navbar-toggler header-menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#support-navigation" aria-controls="support-navigation" aria-expanded="false" aria-label="Alternar menu de navegação">
+                    <i class="bi bi-list" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="nav-links collapse navbar-collapse" id="support-navigation">
                     <button class="btn-ghost" type="button"><i class="bi bi-controller" aria-hidden="true"></i> Game Zone</button>
                     <button class="btn-ghost" type="button"><i class="bi bi-code-slash" aria-hidden="true"></i> Dev Zone</button>
                     <a class="btn-ghost" href="./suporte.html" aria-current="page">Suporte</a>
-                </div>
-            </div>
-            <div class="header-search">
-                <label class="visually-hidden" for="game-search">Buscar jogos</label>
-                <i class="bi bi-search" aria-hidden="true"></i>
-                <input class="input-search" id="game-search" type="search" placeholder="Buscar jogo...">
+                    <a class="btn-ghost mobile-menu-item" href="./em_desenvolvimento.html"><i class="bi bi-shop" aria-hidden="true"></i> Loja</a>
+                    <a class="btn-ghost mobile-menu-item" href="./login.html"><i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Login</a>
+                    <a class="btn-ghost mobile-menu-item" href="./criar_conta.html"><i class="bi bi-person-plus" aria-hidden="true"></i> Criar conta</a>
             </div>
             <div class="header-actions">
                 <a class="icon-button" href="./em_desenvolvimento.html" aria-label="Carrinho de compras">
                     <i class="bi bi-cart" aria-hidden="true"></i>
                 </a>
-                <a href="./criar_conta.html" class="btn-primary" aria-label="Criar Conta">Criar Conta</a>
+                <div class="dropdown">
+                    <button class="icon-button dropdown-toggle account-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Abrir menu da conta">
+                        <i class="bi bi-person" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end account-menu">
+                        <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="./criar_conta.html">Criar conta</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -164,6 +174,7 @@
         </section>
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 
 </html>

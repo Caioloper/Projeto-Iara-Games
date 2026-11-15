@@ -14,3 +14,30 @@ document.querySelectorAll("[data-filter-group]").forEach((group) => {
     });
   });
 });
+
+const hero = document.querySelector(".hero[data-theme]");
+const themeToggle = hero?.querySelector(".hero-theme-toggle");
+
+if (hero && themeToggle) {
+  const themeLabel = themeToggle.querySelector("[data-theme-label]");
+  const themeIcon = themeToggle.querySelector("i");
+
+  themeToggle.addEventListener("click", () => {
+    const isNight = hero.dataset.theme !== "night";
+    hero.dataset.theme = isNight ? "night" : "dawn";
+    themeToggle.setAttribute("aria-pressed", String(isNight));
+    themeToggle.setAttribute(
+      "aria-label",
+      isNight ? "Alternar para o amanhecer" : "Alternar para o anoitecer"
+    );
+
+    if (themeLabel) {
+      themeLabel.textContent = isNight ? "Ver amanhecer" : "Ver anoitecer";
+    }
+
+    if (themeIcon) {
+      themeIcon.classList.toggle("bi-moon", !isNight);
+      themeIcon.classList.toggle("bi-sun", isNight);
+    }
+  });
+}
